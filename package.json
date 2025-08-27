@@ -1,15 +1,14 @@
 {
-  "name": "discord-role-bot-v2",
-  "version": "1.1.0",
-  "description": "Discord role bot with modals and improved UI",
+  "name": "astro-roles-bot",
+  "version": "1.0.0",
+  "description": "Discord bot de auto roles com role temporária",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "deploy": "node commands/deploy-commands.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^14.15.3",
+    "discord.js": "^14.16.3",
     "dotenv": "^16.4.5"
   }
 }
