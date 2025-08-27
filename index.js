@@ -103,12 +103,26 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
         // ✅ Mensagem de boas-vindas após 1 min
         setTimeout(async () => {
-          const channel = await client.channels.fetch(process.env.WELCOME_CHANNEL);
-          if (channel) {
-            channel.send(
-              `Welcome ${member}, we hope you're excited about our Mission.  
+          try {
+            const channel = await client.channels.fetch(process.env.WELCOME_CHANNEL);
+            if (channel) {
+              const welcomeMsg = await channel.send(
+                `Welcome ${member}, we hope you're excited about our Mission.  
 We recommend reading the 📖 <#1352724871410618398> to learn more about AstroNADS and a brief summary of what we have here to take advantage of the benefits within our Community.`
-            );
+              );
+
+              // ✅ Agenda exclusão da mensagem após 15 minutos
+              setTimeout(async () => {
+                try {
+                  await welcomeMsg.delete();
+                  console.log(`🗑️ Mensagem de boas-vindas apagada de ${member.user.tag}`);
+                } catch (err) {
+                  console.error("Erro ao apagar mensagem de boas-vindas:", err);
+                }
+              }, 15 * 60 * 1000); // 15 min
+            }
+          } catch (err) {
+            console.error("Erro ao enviar mensagem de boas-vindas:", err);
           }
         }, 60000);
       } catch (err) {
