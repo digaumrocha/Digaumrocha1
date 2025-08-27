@@ -10,8 +10,6 @@ import {
   Events
 } from "discord.js";
 
-import express from "express"; // ✅ Importando express em ESM
-
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
   partials: [Partials.Channel]
@@ -123,16 +121,3 @@ We recommend reading the 📖 <#1352724871410618398> to learn more about AstroNA
 });
 
 client.login(process.env.TOKEN);
-
-// --------------------
-// Servidor Web (para manter online no Replit)
-// --------------------
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("🚀 Bot is running!");
-});
-
-app.listen(3000, () => {
-  console.log("🌐 Web server is online on port 3000");
-});
