@@ -69,7 +69,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
           .setTitle("✅ Roles Granted")
           .setDescription(
             "AstroNAD, Raidoor, Gamer, Active Tasks, and Giveaways roles have been granted.\n\n" +
-            "You can register your wallet at any time, but doing so now ensures that we can always grant you community activity rewards immediately, as well as your WL if you win. (it's secure, no authentication required).\n" +
+            "IMPORTANT: :redsiren: You can register your wallet adress at any time, but doing so now ensures that we can always grant you community activity rewards immediately, as well as your WL if you win. (it's secure, no authentication required).\n" +
             "Want to do this now?"
           );
 
