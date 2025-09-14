@@ -21,7 +21,8 @@ const roles = [
   process.env.ROLE2,
   process.env.ROLE3,
   process.env.ROLE4,
-  process.env.ROLE5
+  process.env.ROLE5,
+  process.env.ROLE6,
 ];
 
 // Role temporária (7 dias)
