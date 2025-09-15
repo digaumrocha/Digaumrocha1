@@ -78,7 +78,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
           new ButtonBuilder()
             .setLabel("💎 Register Wallet")
             .setStyle(ButtonStyle.Link)
-            .setURL("https://discord.com/channels/1346896831409295460/1356802660027863130/1358581592636915835"),
+            .setURL("https://discord.com/channels/1346896831409295460/1409382250654601328"),
           new ButtonBuilder()
             .setLabel("Don't register wallet now")
             .setStyle(ButtonStyle.Link)
